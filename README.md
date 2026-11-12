@@ -171,26 +171,7 @@ npm run build
 
 ---
 
-## 🎬 3-Minute Video Demo Script
 
-1. **[0:00 - 0:40] The Problem:**
-   - Introduce SMB merchant Sarah selling high-ticket electronics on Shopify & PayPal.
-   - Show how chargeback notifications disrupt her day and the terror of triggering a 10% rolling reserve hold.
-2. **[0:40 - 1:30] Autonomous Dispute Defense in Action:**
-   - A `CUSTOMER.DISPUTE.CREATED` webhook fires for transaction `TXN-PP-001`.
-   - FinOps Copilot instantly pulls tracking from FedEx, verifies signed proof of delivery, and runs Gemini 2.5 Flash reasoning.
-   - Show the **AG Grid** dispute table: low-dollar claims (< $50) are defended autonomously!
-   - High-dollar claims ($380.00) escalate into the **Human-in-the-Loop Review Console**: Sarah inspects the side-by-side evidence and clicks "Approve & Submit Evidence" in one click.
-3. **[1:30 - 2:15] Multimodal Doc-to-Invoice:**
-   - Sarah drags a PDF purchase order into the workspace.
-   - Gemini 2.5 Flash Vision extracts line items, pricing, and buyer information with 98% confidence.
-   - One click dispatches the invoice directly through **PayPal Invoicing V2**.
-4. **[2:15 - 3:00] Cashflow Sentinel & Wrap-up:**
-   - Demonstrate the Dispute Rate Health Gauge: Sarah stays at 0.42% (safely below PayPal's 1.00% threshold).
-   - Show proactive liquidity warnings before holds happen.
-   - Highlight full-stack deployment on **Render**, **AG Grid** tables, and **Google Gemini 2.5 Flash**.
-
----
 
 ## 📄 License
 MIT License. Built with ❤️ for the PayPal AI Hackathon 2026.
