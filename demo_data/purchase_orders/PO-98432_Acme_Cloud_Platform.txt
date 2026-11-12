@@ -1,0 +1,23 @@
+================================================================================
+PURCHASE ORDER #PO-98432
+Acme Corporation Procurement Division
+================================================================================
+
+PO Number: PO-98432
+Date: November 10, 2026
+Customer: Acme Corporation
+Recipient Email: billing@acmecorp.com
+Vendor: FinOps Copilot Merchant Services
+
+--------------------------------------------------------------------------------
+Item Description                                   Qty    Unit Price   Total       
+--------------------------------------------------------------------------------
+Enterprise Cloud Platform Subscription - Tier 2    1      $1,200.00    $1,200.00   
+Professional Implementation & Onboarding Services  1      $800.00      $800.00     
+Priority 24/7 Support SLA Extension                1      $450.00      $450.00     
+--------------------------------------------------------------------------------
+Grand Total Amount: $2,450.00 USD
+Payment Terms: DUE_ON_RECEIPT
+Currency: USD
+Payable via: PayPal Invoicing / PayPal Account
+================================================================================

@@ -1,0 +1,25 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local database
+*.db
+*.sqlite
+*.sqlite3
+finops_copilot.db
+
+# Secrets
+.env
+.env.local
+!.env.example

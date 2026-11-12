@@ -1,0 +1,22 @@
+================================================================================
+COST ESTIMATE & QUOTATION #EST-33910
+Pinnacle Retail Commercial Operations
+================================================================================
+
+Estimate Number: EST-33910
+Date: November 12, 2026
+Customer: Pinnacle Retail Partners
+Recipient Email: operations@pinnacleretail.com
+Validity: 30 Calendar Days
+
+--------------------------------------------------------------------------------
+Item Description                                   Qty    Unit Price   Total       
+--------------------------------------------------------------------------------
+Automated Warehouse Pallet Storage [Pallets/Mo]    30     $45.00       $1,350.00   
+Cross-Dock Carrier Dispatch & Fulfillment Handling 100    $12.50       $1,250.00   
+--------------------------------------------------------------------------------
+Grand Total Amount: $2,600.00 USD
+Payment Terms: DUE_ON_RECEIPT
+Currency: USD
+Payable via: PayPal Invoicing / PayPal Account
+================================================================================

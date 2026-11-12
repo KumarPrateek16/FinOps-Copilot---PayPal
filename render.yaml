@@ -1,0 +1,97 @@
+services:
+  - type: web
+    name: paypal-finops-api
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: finops-postgres
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: finops-redis
+          property: connectionString
+      - key: CELERY_BROKER_URL
+        fromService:
+          type: redis
+          name: finops-redis
+          property: connectionString
+      - key: CELERY_RESULT_BACKEND
+        fromService:
+          type: redis
+          name: finops-redis
+          property: connectionString
+      - key: PAYPAL_ENVIRONMENT
+        value: sandbox
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+
+  - type: worker
+    name: paypal-finops-worker
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && celery -A app.celery_app worker --loglevel=info
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: finops-postgres
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: finops-redis
+          property: connectionString
+      - key: CELERY_BROKER_URL
+        fromService:
+          type: redis
+          name: finops-redis
+          property: connectionString
+      - key: CELERY_RESULT_BACKEND
+        fromService:
+          type: redis
+          name: finops-redis
+          property: connectionString
+
+  - type: web
+    name: paypal-finops-frontend
+    env: static
+    region: oregon
+    plan: starter
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: paypal-finops-api
+          property: url
+
+  - type: redis
+    name: finops-redis
+    region: oregon
+    plan: starter
+    ipAllowList: []
+
+databases:
+  - name: finops-postgres
+    region: oregon
+    plan: starter
+    databaseName: finops_db
+    user: finops_user

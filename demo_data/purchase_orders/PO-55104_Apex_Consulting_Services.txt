@@ -1,0 +1,22 @@
+================================================================================
+PURCHASE ORDER #PO-55104
+Apex Solutions LLC Technology Group
+================================================================================
+
+PO Number: PO-55104
+Date: November 08, 2026
+Customer: Apex Solutions LLC
+Recipient Email: ap@apexsolutions.io
+Vendor: FinOps Copilot Merchant Services
+
+--------------------------------------------------------------------------------
+Item Description                                   Qty    Unit Price   Total       
+--------------------------------------------------------------------------------
+FinOps Architecture Consulting [10 Hours]          10     $175.00      $1,750.00   
+Security & Compliance Audit Review                 1      $1,400.00    $1,400.00   
+--------------------------------------------------------------------------------
+Grand Total Amount: $3,150.00 USD
+Payment Terms: NET_10
+Currency: USD
+Payable via: PayPal Invoicing / PayPal Account
+================================================================================

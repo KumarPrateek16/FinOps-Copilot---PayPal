@@ -1,0 +1,109 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom AG Grid Minimalist Styling (Zero Gradients, Crisp Flat Cards) */
+.ag-theme-alpine {
+  --ag-font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ag-font-size: 12.5px;
+  --ag-header-background-color: #F8FAFC;
+  --ag-header-foreground-color: #475569;
+  --ag-border-color: #E2E8F0;
+  --ag-row-hover-color: #F1F5F9;
+  --ag-selected-row-background-color: #E2E8F0;
+  --ag-header-cell-hover-background-color: #F1F5F9;
+  --ag-border-radius: 12px;
+  --ag-cell-horizontal-padding: 16px;
+}
+
+.ag-root-wrapper {
+  border-radius: 12px !important;
+  border: 1px solid #E2E8F0 !important;
+  background-color: #FFFFFF !important;
+}
+
+/* AG Grid Mobile & Responsive Pagination Fixes */
+.ag-theme-alpine .ag-paging-panel {
+  border-top: 1px solid #E2E8F0 !important;
+  font-size: 12px !important;
+  color: #64748B !important;
+}
+
+@media (max-width: 640px) {
+  .ag-theme-alpine .ag-paging-panel {
+    justify-content: space-between !important;
+    padding: 0 8px !important;
+    height: 42px !important;
+    font-size: 11px !important;
+    overflow: hidden !important;
+  }
+
+  /* Hide the page size dropdown on mobile phones (< 640px) to prevent pagination clipping */
+  .ag-theme-alpine .ag-paging-page-size {
+    display: none !important;
+  }
+
+  /* Prevent row summary from wrapping words vertically */
+  .ag-theme-alpine .ag-paging-row-summary-panel {
+    white-space: nowrap !important;
+    margin: 0 !important;
+    font-size: 11px !important;
+    overflow: hidden !important;
+  }
+
+  .ag-theme-alpine .ag-paging-row-summary-panel span {
+    display: inline !important;
+    white-space: nowrap !important;
+  }
+
+  /* Page navigation buttons & indicators */
+  .ag-theme-alpine .ag-paging-page-summary-panel {
+    white-space: nowrap !important;
+    margin: 0 !important;
+    font-size: 11px !important;
+  }
+
+  .ag-theme-alpine .ag-paging-page-summary-panel span {
+    display: inline !important;
+    white-space: nowrap !important;
+  }
+
+  .ag-theme-alpine .ag-paging-button {
+    padding: 0 2px !important;
+    min-width: 20px !important;
+  }
+}
+
+/* Custom Scrollbar for Responsive Tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

@@ -1,0 +1,22 @@
+================================================================================
+PURCHASE ORDER #PO-10492
+TechCorp Global Infrastructure Procurement
+================================================================================
+
+PO Number: PO-10492
+Date: November 11, 2026
+Customer: TechCorp Global
+Recipient Email: finance@techcorpglobal.com
+Vendor: FinOps Copilot Merchant Services
+
+--------------------------------------------------------------------------------
+Item Description                                   Qty    Unit Price   Total       
+--------------------------------------------------------------------------------
+Rackmount Edge Computing Server Node 2U            2      $1,800.00    $3,600.00   
+High-Speed Network Interface Modules 10Gbps        4      $150.00      $600.00     
+--------------------------------------------------------------------------------
+Grand Total Amount: $4,200.00 USD
+Payment Terms: NET_30
+Currency: USD
+Payable via: PayPal Invoicing / PayPal Account
+================================================================================

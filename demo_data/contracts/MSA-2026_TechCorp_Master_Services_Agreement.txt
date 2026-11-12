@@ -1,0 +1,21 @@
+================================================================================
+ENTERPRISE AGREEMENT #MSA-2026-901
+Software Licensing and Technical Services Agreement
+================================================================================
+
+Agreement ID: MSA-2026-901
+Date: November 05, 2026
+Customer: TechCorp Global
+Recipient Email: procurement@techcorpglobal.com
+Jurisdiction: Delaware, USA
+
+--------------------------------------------------------------------------------
+Item Description                                   Qty    Unit Price   Total       
+--------------------------------------------------------------------------------
+Annual Enterprise FinOps Platform License Tier-3   1      $12,000.00   $12,000.00  
+--------------------------------------------------------------------------------
+Grand Total Amount: $12,000.00 USD
+Payment Terms: NET_30
+Currency: USD
+Payable via: PayPal Invoicing / PayPal Account
+================================================================================

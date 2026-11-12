@@ -1,0 +1,169 @@
+{
+  "info": {
+    "name": "PayPal FinOps Copilot API",
+    "_postman_id": "7fa12399-55bc-4402-9988-copilot0001",
+    "description": "Postman API test suite for PayPal FinOps Copilot — Autonomous Dispute Defense, Gemini 2.5 Flash Invoicing, and Cashflow Sentinel.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Disputes & HITL",
+      "item": [
+        {
+          "name": "List Disputes (AG Grid Feed)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/disputes",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "disputes"]
+            }
+          }
+        },
+        {
+          "name": "Get Dispute Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/disputes/{{disputeId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "disputes", "{{disputeId}}"]
+            }
+          }
+        },
+        {
+          "name": "List HITL Review Queue",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/disputes/hitl/queue",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "disputes", "hitl", "queue"]
+            }
+          }
+        },
+        {
+          "name": "Submit HITL Decision (Approve / Concede)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"decision\": \"APPROVE_SUBMISSION\",\n  \"reviewer_notes\": \"Verified by operations manager. FedEx tracking confirms on-time delivery with recipient signature.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/disputes/{{disputeId}}/hitl/action",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "disputes", "{{disputeId}}", "hitl", "action"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Multimodal Invoicing",
+      "item": [
+        {
+          "name": "Create Draft Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"invoice_number\": \"INV-POSTMAN-001\",\n  \"recipient_name\": \"Acme Cloud Services\",\n  \"recipient_email\": \"billing@acmecloud.com\",\n  \"currency\": \"USD\",\n  \"payment_terms\": \"DUE_ON_RECEIPT\",\n  \"line_items\": [\n    {\n      \"item_name\": \"AI Agentic Platform License\",\n      \"description\": \"Annual enterprise license\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1200.0,\n      \"tax_rate\": 0.0,\n      \"total\": 1200.0\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/invoices",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "invoices"]
+            }
+          }
+        },
+        {
+          "name": "List Invoices",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/invoices",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "invoices"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cashflow Sentinel",
+      "item": [
+        {
+          "name": "Get Real-Time Cashflow Metrics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/cashflow/metrics",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "cashflow", "metrics"]
+            }
+          }
+        },
+        {
+          "name": "Sync Metrics with PayPal",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/cashflow/sync",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "cashflow", "sync"]
+            }
+          }
+        },
+        {
+          "name": "List Active Financial Alerts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/cashflow/alerts",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "cashflow", "alerts"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
